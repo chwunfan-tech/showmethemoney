@@ -3,7 +3,8 @@ name: Daily TWSE Scrape
 on:
   schedule:
     # UTC 時間 09:30 = 台灣時間 17:30（收盤後、資料通常已更新完）
-    - cron: "30 9 * * 1-5"
+    # UTC 13:30 = 台灣時間 21:30 (融資券資料比較晚更新完)
+    - cron: "30 13 * * 1-5"  
   workflow_dispatch: {}   # 允許手動觸發，方便測試
 
 permissions:
